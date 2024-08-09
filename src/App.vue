@@ -1,0 +1,22 @@
+<script setup>
+// import { ref } from 'vue'
+// import CoffeePlan from './components/CoffeePlan.vue'
+
+// const plans = ref(['The Single', 'The Curious', 'The Addict', 'The Hacker'])
+
+import PlanPicker from './components/PlanPicker.vue'
+</script>
+
+
+<template>
+<div class="content">
+  <!-- <PlanPicker/> -->
+  <h1 class="title">Coffee Plans</h1>
+
+  <h2 class="subtitle">We travel the world to source the very best single origin coffee for you</h2>
+
+  <PlanPicker/>
+</div>
+    
+  
+</template>
