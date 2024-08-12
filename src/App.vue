@@ -1,10 +1,13 @@
 <script setup>
-// import { ref } from 'vue'
+import { ref} from 'vue'
 // import CoffeePlan from './components/CoffeePlan.vue'
-
-// const plans = ref(['The Single', 'The Curious', 'The Addict', 'The Hacker'])
-
 import PlanPicker from './components/PlanPicker.vue'
+import FancyButton from './components/FancyButton.vue'
+
+const show = ref(true)
+
+
+
 </script>
 
 
@@ -15,7 +18,16 @@ import PlanPicker from './components/PlanPicker.vue'
 
   <h2 class="subtitle">We travel the world to source the very best single origin coffee for you</h2>
 
-  <PlanPicker/>
+  <label ><input type="checkbox" v-model="show">Show plan picker</label>
+  <PlanPicker v-if="show"/>
+
+  <FancyButton>
+    <!-- //scoped slot -->
+    <template #icon{hover}>
+      {{ hover ? '👋' : '👊' }}
+    </template>
+    Submit
+  </FancyButton>
 </div>
     
   
